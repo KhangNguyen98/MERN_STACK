@@ -1,0 +1,19 @@
+.button-custom {
+  width: 12rem;
+  padding: 0 35px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background-color: #000;
+  border: none;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-custom:hover,
+.button-custom:active {
+  color: #ffc947;
+}

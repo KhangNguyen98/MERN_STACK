@@ -1,0 +1,18 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=greek-ext&v2");
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700;1,900&display=swap");
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  font-family: Open Sans Condensed, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-left: 4rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

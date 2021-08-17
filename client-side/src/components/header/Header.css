@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  margin-top: 1.5rem;
+  height: 80px;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.logo-container > img {
+  height: 80%;
+}
+
+.options {
+  padding: 1rem;
+  margin-right: 4rem;
+}
+
+.options a {
+  text-decoration: none;
+  padding-right: 2rem;
+  color: black;
+  cursor: pointer;
+}
+
+.options a:hover,
+.options a:active {
+  color: #ffaa4c;
+}

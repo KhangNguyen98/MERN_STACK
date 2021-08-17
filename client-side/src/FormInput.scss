@@ -1,0 +1,60 @@
+.sign-in-form,
+.sign-up-form {
+  height: 60vh;
+}
+
+.element-in-group {
+  margin-top: 3rem;
+  position: relative;
+}
+
+input {
+  padding: 0.5rem;
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 20rem;
+  font-size: 15px;
+}
+
+input:focus-visible,
+input:not(:focus-visible):not(:placeholder-shown) {
+  outline: none;
+  & + .label-for-input {
+    font-size: 12px;
+    top: -10px;
+  }
+}
+
+.label-for-input {
+  position: absolute;
+  left: 5px;
+  transition: 200ms ease all;
+}
+
+//vaidate
+[type="email"],
+[type="password"],
+.user-name {
+  &:invalid:focus:not(:placeholder-shown) {
+    & ~ .requirement {
+      visibility: visible;
+      max-height: 200px;
+      padding: 10px 15px 10px 0px;
+    }
+  }
+}
+
+.requirement {
+  visibility: hidden;
+  transition: 0.28s;
+  color: #f65157;
+  font-family: "Merriweather", serif;
+  overflow: hidden;
+}
+
+.err-message {
+  padding: 10px 15px 10px 0px;
+  transition: 0.28s;
+  color: #f65157;
+  font-family: "Merriweather", serif;
+}

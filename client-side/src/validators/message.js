@@ -1,0 +1,9 @@
+export const ERR_MSG_EMAIL = "Invalid Email! Length must be equal or larger than 5";
+export const ERR_MSG_NAME = "Name Length must be equal or larger than 5";
+export const ERR_MSG_PASSWORD = "Password Length must be equal or larger than 5";
+export const ERR_MSG_CONFIRM_PASSWORD = "Not equal with password";
+export const ERR_MSG_LOGIN = "Email or password is correct.Please input again!";
+export const SUCCESS_MSG_SIGN_UP = "Your account is verified.Please login ^^";
+export const MSG_MUST_LOGIN = "You must login first!";
+export const MSG_TIME_OUT = "Time out! Please login again!";
+export const MSG_WARNING = "You dont have permission to do this !!!";

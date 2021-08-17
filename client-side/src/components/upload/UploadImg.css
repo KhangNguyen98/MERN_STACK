@@ -1,0 +1,16 @@
+.form-submit-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-submit-image > * {
+  margin-bottom: 2rem;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
