@@ -1,4 +1,4 @@
-# stock-image app
+# stock-photo app
 
 In this project, i use React(Hook), GraphQL, Socket.io, Redux, ExpressJS and Mongoose
 
