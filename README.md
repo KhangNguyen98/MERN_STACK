@@ -20,11 +20,3 @@ In this project, i use React(Hook), GraphQL, Socket.io, Redux, ExpressJS and Mon
     npm install
     yarn start
     ```
-
-Then, in package server-side insert this uri into const MONGOOSE_URI of App.js
-
-Open terminal of package server-side run npm install then run yarn start
-
-On client-side package run npm install then run yarn start.
-
-Then enjoy ^^
