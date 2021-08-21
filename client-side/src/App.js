@@ -7,7 +7,7 @@ import SignInForm from './components/sign-in/SignInForm';
 import SignUpForm from './components/sign-up/SignUpForm';
 import NotFound from './components/error/NotFound';
 import UserFunction from './components/user-function/UserFunction';
-import { USERID } from './conventions/convention';
+import { GET_USERID } from './conventions/convention';
 
 //using redux
 import { useSelector } from "react-redux";
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <Fragment>
-      <Header userID={USERID(dataFromApp)} />
+      <Header userID={GET_USERID(dataFromApp)} />
       {error && <p className="notification">Something went wrong! Please check error!</p>}
       {!error &&
         <Switch>

@@ -17,7 +17,7 @@ import { listeningRequest } from "../../util/socketClient";
 
 import { getImages, getOwnImages, deleteImage, saveDownloadCountOfImg } from "../../interaction-with-server/function";
 
-import { USERID, TOKEN } from "../../conventions/convention";
+import { GET_USERID, GET_TOKEN } from "../../conventions/convention";
 
 
 const ImageItem = ({ isShowingFooter, isShowingButton, images }) => {
@@ -38,7 +38,7 @@ const ImageItem = ({ isShowingFooter, isShowingButton, images }) => {
     const removeImage = useCallback(
         (e, imageIDToDelete, ownerID) => {
             e.preventDefault();
-            if (!TOKEN(dataFromApp)) {
+            if (!GET_TOKEN(dataFromApp)) {
                 history.push(
                     {
                         pathname: "/signin",
@@ -53,7 +53,7 @@ const ImageItem = ({ isShowingFooter, isShowingButton, images }) => {
                     }
                 );
             }
-            deleteImage(TOKEN(dataFromApp), imageIDToDelete, dataFromApp.imagesOwnedByUser, dataFromApp.images, dispatch);
+            deleteImage(GET_TOKEN(dataFromApp), imageIDToDelete, dataFromApp.imagesOwnedByUser, dataFromApp.images, dispatch);
         }, [dataFromApp, dispatch, history]
     );
 
@@ -63,7 +63,7 @@ const ImageItem = ({ isShowingFooter, isShowingButton, images }) => {
                 getImages(dispatch);
             }
             else if (isShowingButton) {
-                getOwnImages(TOKEN(dataFromApp), USERID(dataFromApp), dispatch);
+                getOwnImages(GET_TOKEN(dataFromApp), GET_USERID(dataFromApp), dispatch);
             }
             // if (!isPrivate) {
             //     fetchAllImages(dispatch);

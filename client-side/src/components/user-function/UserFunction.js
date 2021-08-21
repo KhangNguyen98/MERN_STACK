@@ -5,14 +5,14 @@ import "./UserFunction.css";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import { MSG_MUST_LOGIN } from "../../validators/message";
-import { USERID } from "../../conventions/convention";
+import { GET_USERID } from "../../conventions/convention";
 import { data } from "browserslist";
 const UserFunction = () => {
  const dataFromApp = useSelector(state => state.stateForApp);
 
  //check authenticated
  const history = useHistory();
- if (!USERID(data)) {
+ if (!GET_USERID(data)) {
   history.push(
    {
     pathname: "/signin",
@@ -45,7 +45,7 @@ const UserFunction = () => {
  return (
   <div>
    <UploadImg />
-   {USERID(dataFromApp) &&
+   {GET_USERID(dataFromApp) &&
     <div className="image-container">
      <ImageItem images={dataFromApp.imagesOwnedByUser} isShowingButton={true} />
     </div>

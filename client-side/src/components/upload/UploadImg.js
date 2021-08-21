@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { postImage } from "../../interaction-with-server/function";
 
-import { TOKEN } from "../../conventions/convention";
+import { GET_TOKEN } from "../../conventions/convention";
 
 const UploadImg = () => {
  const dataOfApp = useSelector(state => state.stateForApp);
@@ -56,7 +56,7 @@ const UploadImg = () => {
   }
   //img.image (preview Image)
   //img.imagePath is used to send to server for saving
-  postImage(TOKEN(dataOfApp), img.imagePath, dispatch, setImage, turnOnNotification);
+  postImage(GET_TOKEN(dataOfApp), img.imagePath, dispatch, setImage, turnOnNotification);
  }
 
  return (

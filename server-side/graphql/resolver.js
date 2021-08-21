@@ -2,7 +2,7 @@
 const User = require("../models/User").User;
 const Image = require("../models/Image").Image;
 const validator = require("validator");
-const bscrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 //websocket
@@ -57,7 +57,7 @@ exports.graphqlResolver = {
   if (existedUser) {
    throwError("Email is existed.Please choose another", 422);
   }
-  const hashPassword = await bscrypt.hash(password, 12);
+  const hashPassword = await bcrypt.hash(password, 12);
   const newUser = new User(
    {
     email,
@@ -73,7 +73,7 @@ exports.graphqlResolver = {
   let isAuthenticated = false;
   const user = await User.findOne({ email });
   if (user) {
-   const isEqual = await bscrypt.compare(password, user.password);
+   const isEqual = await bcrypt.compare(password, user.password);
    if (isEqual) {
     isAuthenticated = true;
    }
